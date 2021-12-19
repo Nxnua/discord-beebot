@@ -1,6 +1,6 @@
 import discord
 import asyncio
-from chatmanage import filtering, command, hey, garen
+from chatmanage import filtering, command, hello, hey, garen, meal
 from discord.ext import tasks
 from itertools import cycle
 
@@ -64,6 +64,10 @@ async def on_message(message):
         return
     if message.content.startswith('!명령어'):
         await message.channel.send(embed=command(message))
+    if message.content.startswith('!안녕'):
+        await message.channel.send(hello(message) + message.author.name + ' 님!')
+    if message.content.startswith('!밥') or message.content.startswith('!메뉴'):
+        await message.channel.send(meal(message) + ' 어떠세요?')
     if message.content.startswith('!야'):
         await message.channel.send(embed=hey(message))
     if message.content.startswith('!가붕'):
