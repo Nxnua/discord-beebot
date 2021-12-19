@@ -3,6 +3,7 @@ import asyncio
 from chatmanage import filtering, command, hello, hey, garen, meal
 from discord.ext import tasks
 from itertools import cycle
+from search import search
 
 intents = discord.Intents.default()
 intents.members = True
@@ -72,6 +73,8 @@ async def on_message(message):
         await message.channel.send(embed=hey(message))
     if message.content.startswith('!가붕'):
         await message.channel.send(embed=garen(message))
+    if message.content.startswith('!검색'):
+        await message.channel.send(embed=search(message))
 
     else:
         for i in shit:
