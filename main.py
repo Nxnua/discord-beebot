@@ -54,5 +54,7 @@ async def on_message(message):
         #embed = discord.Embed(title=f"명령어 모음", description="꿀벌봇은 현재 아래 기능들을 지원하고 있습니다!", color=0xf3bb76)
         await message.channel.send(embed=embed)
 
+def filtering(client)
+
 client.loop.create_task(my_background_task())
 client.run(token)
