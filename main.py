@@ -5,9 +5,11 @@ from chatmanage import filtering
 
 token = open("token", "r").readline()
 
-client = discord.Client()
+
 
 def main():
+
+    client = discord.Client()
     async def my_background_task():
         await client.wait_until_ready()
         channel = discord.Object(id='921987302362857495')
