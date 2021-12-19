@@ -1,7 +1,8 @@
-
-@client.event
+import discord
 
 shit = ["시발", "씨발", "애미", "느금"]
+
+@client.event
 async def filtering(message):
     chat = message.content
     for i in shit:
