@@ -73,6 +73,9 @@ def search(message):
     res_ = requests.get(url_).text
     soup_ = BeautifulSoup(res_, "html.parser")
 
+    if soup_.find("a", attrs={"class": "sbtn small"}) == None:
+        return -1
+
     level_ = soup_.find("a", attrs={"class": "sbtn small"}).get_text()
     level = level_.split(" ")[1]
 

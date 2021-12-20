@@ -84,18 +84,34 @@ async def on_message(message):
     if message.content.startswith('!가붕'):
         await message.channel.send(embed=garen(message))
     if message.content.startswith('!유저'):
-        t1 = t.time()
-        await message.channel.send(file=search(message))
-        t2 = t.time()
-        embed = discord.Embed(title="데이터 출처", description="your.gg / fow.kr", color=0x62c1cc)
-        embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
-        embed.set_footer(text="솔로랭크 기준 티어입니다. | 랭크 정보가 없을 시 출력되지 않습니다.",
+        file = search(message)
+        if file == -1:
+            embed = discord.Embed(title="앗! 유저를 찾을 수 없어요.", description="철자가 맞는지 확인해주세요", color=0x62c1cc)
+            embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
+        else:
+            t1 = t.time()
+            await message.channel.send(file=file)
+            t2 = t.time()
+            embed = discord.Embed(title="데이터 출처", description="your.gg / fow.kr", color=0x62c1cc)
+            embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
+            embed.set_footer(text="솔로랭크 기준 티어입니다. | 랭크 정보가 없을 시 출력되지 않습니다.",
                          icon_url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
 
         await message.channel.send(embed=embed)
         await message.delete()
     if message.content.startswith('!챔피언'):
-        await message.channel.send(file=champion(message))
+        file = champion(message)
+        if file == -1:
+            embed = discord.Embed(title="잘못된 라인 이름이에요.", description="다음 중 하나를 입력해주세요. \n`탑`, `정글`, `미드`, `원딜`, `서폿`",
+                                  color=0x62c1cc)
+            embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
+            await message.channel.send(embed=embed)
+        elif file == -2:
+            embed = discord.Embed(title="잘못된 챔피언 이름이에요.", description="오타가 있는지, 띄어쓰기를 했는지 확인해주세요.", color=0x62c1cc)
+            embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
+            await message.channel.send(embed=embed)
+        else:
+            await message.channel.send(file=champion(message))
         #await message.channel.send(embed=champion(message))
 
     else:

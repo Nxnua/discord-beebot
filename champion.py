@@ -15,11 +15,9 @@ def champion(message):
     line, name = temp[0], temp[1]
 
     if line not in pos:
-        embed = discord.Embed(title="잘못된 라인 명칭", description="다음 중 하나를 입력해주세요. \n`탑`, `정글`, `미드`, `원딜`, `서폿`", color=0x62c1cc)
-        return embed
+        return -1
     if chamdb(name) == -1:
-        embed = discord.Embed(title="잘못된 챔피언 명", description="오타가 있는지 확인해주세요.", color=0x62c1cc)
-        return embed
+        return -2
 
     url = baseurl + chamdb(name) + "/" + pos[line]
     res = requests.get(url).text
