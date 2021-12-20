@@ -9,7 +9,7 @@ def command():
     embed = discord.Embed(title=f"명령어 모음", description="꿀벌봇은 현재 아래 기능들을 지원하고 있습니다!", color=0xf3bb76)
     embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
     embed.add_field(name=f"!유저", value="`!유저 닉네임 (ex. !유저 빽핑의화신)`\n해당 유저 정보를 카드 형식으로 볼 수 있습니다", inline=False)
-    embed.add_field(name=f"!챔피언", value="`!챔피언 라인 이름 (ex. !챔피언 탑 가렌)`\n해당 라인에서 챔피언의 승률 표본,\n템트리 정보를 검색합니다.",
+    embed.add_field(name=f"!챔피언", value="`!챔피언 라인 이름 (ex. !챔피언 탑 가렌)\n챔피언명은 반드시 ※공백없이※ 입력해주세요!\n챔피언명을 줄여서 입력해도 검색 가능합니다.\n[예시]\n아우렐리온 솔(x) 아우렐리온솔(o) 아우솔(o)`\n해당 라인에서 챔피언의 승률 표본,\n템트리 정보를 검색합니다.",
                     inline=False)
     embed.add_field(name="ㅤ", value="ㅤ", inline=True)
     embed.add_field(name=f"[그 외 쓸모 없어 보이지만 소소한 기능들]", value="`숨겨진 몇가지 이스터에그는 덤!\n※채팅 중 심한 욕설은 삭제 될 수 있으니\n주의해 주세요※`", inline=False)
