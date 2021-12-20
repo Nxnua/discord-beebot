@@ -38,6 +38,7 @@ async def on_guild_join(guild):
             await channel.send('안녕하세요 소환사님, 꿀벌봇이 왔어요🐝')
             await channel.send('도움이 필요하시다면 아래 명령을 내려주세요!')
             await channel.send(embed=command())
+            break
 
 
 @client.event
