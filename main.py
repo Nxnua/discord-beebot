@@ -78,6 +78,7 @@ async def on_message(message):
                          icon_url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
 
         await message.channel.send(embed=embed)
+        await message.delete()
     if message.content.startswith('!챔피언'):
         pass
         #await message.channel.send(embed=champion(message))
