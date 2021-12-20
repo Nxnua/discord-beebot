@@ -85,6 +85,11 @@
 
 >아래는 프로젝트를 개발하면서 코드 일부 인용 및 참고한 사이트 입니다.
 
+- [네이버 블로그 므느으르](https://blog.naver.com/PostView.naver?blogId=seojune5383&logNo=222393633218&categoryNo=68&proxyReferer=#)
+```
+디스코드봇이 성공적으로 가동되었는지 확인하는 기능 및 봇의 상태메세지를
+일정 시간마다 변경해주는 기능을 추가하는 코드를 인용하였습니다.
+```
 - [네이버 블로그 코코블루의 다락방](https://blog.naver.com/PostView.naver?blogId=6116949&logNo=221949748751&redirect=Dlog&widgetTypeCall=true&directAccess=false)
 ```
 main.py에서 on_member_join과 on_member_remove를 구현함에 있어서 
