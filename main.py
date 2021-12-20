@@ -49,7 +49,7 @@ async def on_guild_join(guild):
 
 
 @client.event
-async def on_member_join(self, member):
+async def on_member_join(member):
     #channel = client.get_channel(id=921987302362857495)
     # member.send('협곡에서 즐거운 시간 보내세요 ' + member.name + ' 님!')
     # await member.send('!명령어 를 입력하시면 제가 뭘 할 수 있는지 보여드릴게요😎')
@@ -59,7 +59,7 @@ async def on_member_join(self, member):
 
 
 @client.event
-async def on_member_remove(self, member):
+async def on_member_remove(member):
     #channel = client.get_channel(id=921987302362857495)
     #channel = member.server.default_channel
     #await channel.send(member.name + ' 님이 협곡을 떠나셨어요.')
