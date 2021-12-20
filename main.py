@@ -107,7 +107,7 @@ async def on_message(message):
             embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
             await message.channel.send(embed=embed)
         elif file == -2:
-            embed = discord.Embed(title="잘못된 챔피언 이름이에요.", description="오타가 있는지, 띄어쓰기를 했는지 확인해주세요.", color=0x62c1cc)
+            embed = discord.Embed(title="잘못된 챔피언 이름이에요.", description="오타가 있는지, 띄어쓰기가 있는지 확인해주세요.\n꿀벌봇은 띄어쓰기를 하면 인식하지 못해요!", color=0x62c1cc)
             embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
             await message.channel.send(embed=embed)
         else:

@@ -42,7 +42,7 @@ cham = {"이즈리얼" : "Ezreal", "이즈" : "Ezreal", "진" : "Jhin", "리신"
         "미포" : "MissFortune", "자야" : "Xayah", "바루스" : "Varus", "시비르" : "Sivir", "코그모" : "KogMaw",
         "세나" : "Senna", "스웨인" : "Swain", "알리스타" : "Alistar", "알리" : "Alistar", "나미" : "Nami",
         "소라카" : "Soraka", "라칸" : "Rakan", "자이라" : "Zyra", "브라움" : "Braum", "잔나" : "Janna", "바드" : "Bard",
-        "렐" : "Rell", "소나" : "Sona", "세라핀" : "Seraphine", "시진핑" : "Seraphine", "타릭" : "Taric"}
+        "렐" : "Rell", "소나" : "Sona", "세라핀" : "Seraphine", "시진핑" : "Seraphine", "타릭" : "Taric", "엄준식" : "Amumu"}
 
 def chamdb(name):
         if name in cham:
