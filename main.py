@@ -16,6 +16,13 @@ token = open("token", "r").readline()
 
 status = cycle(["협곡 위를 비행", "붕붕붕!"])
 
+def find_first_channel(channels):
+    position_array = [i.position for i in channels]
+
+    for i in channels:
+        if i.position == min(position_array):
+            return i
+
 @client.event
 async def on_ready():
     print('로그인 중입니다')
@@ -42,17 +49,21 @@ async def on_guild_join(guild):
 
 
 @client.event
-async def on_member_join(member):
+async def on_member_join(self, member):
     #channel = client.get_channel(id=921987302362857495)
-    await member.send('협곡에서 즐거운 시간 보내세요 ' + member.name + ' 님!')
-    await member.send('!명령어 를 입력하시면 제가 뭘 할 수 있는지 보여드릴게요😎')
+    # member.send('협곡에서 즐거운 시간 보내세요 ' + member.name + ' 님!')
+    # await member.send('!명령어 를 입력하시면 제가 뭘 할 수 있는지 보여드릴게요😎')
+    await find_first_channel(member.guild.text_channels).send('협곡에서 즐거운 시간 보내세요 ' + member.name + ' 님!')
+    await find_first_channel(member.guild.text_channels).send('!명령어 를 입력하시면 제가 뭘 할 수 있는지 보여드릴게요😎')
+
 
 
 @client.event
-async def on_member_remove(member):
+async def on_member_remove(self, member):
     #channel = client.get_channel(id=921987302362857495)
-    channel = member.server.default_channel
-    await channel.send(member.name + ' 님이 협곡을 떠나셨어요.')
+    #channel = member.server.default_channel
+    #await channel.send(member.name + ' 님이 협곡을 떠나셨어요.')
+    await find_first_channel(member.guild.text_channels).send(member.name + ' 님이 협곡을 떠나셨어요.')
 
 
 shit = ["시발", "씨발", "애미", "느금", "병신", "개새끼"]
