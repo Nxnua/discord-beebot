@@ -104,5 +104,5 @@ main.py에서 on_member_join과 on_member_remove를 구현함에 있어서
 ```
 - [티스토리 정구리의 우주정복](https://j-ungry.tistory.com/180?category=894695)
 ```
-욕설 필터링 기능을 구현하면서 참고한 글입니다.
+욕설 필터링 기능을 구현하면서 코드 인용 및 참고한 글입니다.
 ```
