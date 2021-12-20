@@ -36,14 +36,26 @@
 
 - 꿀벌봇이 서버에 초대되었을 때
 <img src="https://user-images.githubusercontent.com/81071456/146804917-c8575b6d-7d82-4dab-874a-8eeb9d634241.PNG" width="300" height="400"/>
+
 - 서버에 새로운 멤버가 입장한 경우 환영 메세지
+<img src="https://user-images.githubusercontent.com/81071456/146806081-a5e50c6e-ffaf-4c22-addc-df1e9159006e.PNG"/>
 
 - 멤버가 서버를 떠났을 때 퇴장 알림 메세지
+<img src="https://user-images.githubusercontent.com/81071456/146805867-06568f03-8a60-4339-b520-171ecd2fe0ca.PNG"/>
 
 - `!유저 hide on bush` 명령어 결과물
+<img src="https://user-images.githubusercontent.com/81071456/146806243-ac9d6fa8-5740-47c1-a35b-1bfd16cb7412.PNG" width="300" height="300"/>
 
 - `!챔피언 탑 가렌` 명령어 결과물
+<img src="https://user-images.githubusercontent.com/81071456/146807477-7ff392cb-0167-4cc7-8dac-494417e82f52.PNG" width="300" height="250"/>
+
+- 잘못된 명령어 입력인 경우
+<img src="https://user-images.githubusercontent.com/81071456/146807732-aeb3145d-01d1-45fd-931c-9ad4820fecb7.PNG" width="300" height="200"/>
 
 - `!안녕` 명령어 결과물
+<img src="https://user-images.githubusercontent.com/81071456/146806927-9b1859e7-5ac2-456b-9885-59d63b5e2747.PNG"/>
 
 - `!밥` 명령어 결과물
+<img src="https://user-images.githubusercontent.com/81071456/146807090-526c17df-03d3-4118-abe6-d75d938ecab5.PNG"/>
+
+##
