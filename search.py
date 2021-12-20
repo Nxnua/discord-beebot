@@ -152,13 +152,17 @@ def getImage(name):
 
 def getColor(tier):
     color = (0, 0, 0)
+    color2 = (0, 0, 0)
 
     if tier.startswith('Unranked'):
         color = (213, 213, 213)
+        color2 = (143, 143, 143)
     elif tier.startswith('Iron'):
         color = (114, 111, 110)
+        color2 = (103, 79, 76)
     elif tier.startswith('Bronze'):
         color = (90, 71, 57)
+        color2 = ()
     elif tier.startswith('Silver'):
         color = (190, 200, 209)
     elif tier.startswith('Gold'):
@@ -174,22 +178,24 @@ def getColor(tier):
     elif tier.startswith('Challenger'):
         color = (92, 158, 224)
 
-    return color
+    return color, color2
 
 
 def im_show(temp):
-    im = Image.new("RGB", (320, 470), getColor(temp[3]))
-    im2 = Image.new("RGB", (300, 450), (0, 0, 0))
+    im = Image.new("RGB", (360, 510), getColor(temp[3])[0])
+    im2 = Image.new("RGB", (320, 470), (0, 0, 0))
+    im3 = Image.new("RGB", (340, 490), getColor(temp[3])[1])
     table = Image.new("RGB", (10, 10), (30, 32, 44))
     draw = ImageDraw.Draw(im)
     font = ImageFont.truetype("malgunbd.ttf", 17)
     font2 = ImageFont.truetype("malgunbd.ttf", 15)
-    im.paste(im2, (10, 10))
-    draw.text((20, 20), temp[0], font=font, fill=(255, 255, 255))
-    draw.text((20, 50), "레벨", font=font2, fill=(140, 140, 140))
-    draw.text((60, 50), temp[1], font=font2, fill=(140, 140, 140))
-    im.paste(getImage(temp[2]), (110, 85))
-    draw.text((20, 220), "티어 정보", font=font2, fill=(255, 255, 255))
-    draw.text((20, 245), temp[3], font=font2, fill=(140, 140, 140,))
+    im.paste(im3, (10, 10))
+    im.paste(im2, (20, 20))
+    draw.text((40, 35), temp[0], font=font, fill=(255, 255, 255))
+    draw.text((40, 60), "레벨", font=font2, fill=(140, 140, 140))
+    draw.text((80, 60), temp[1], font=font2, fill=(140, 140, 140))
+    im.paste(getImage(temp[2]), (130, 90))
+    draw.text((40, 225), "티어 정보", font=font2, fill=(255, 255, 255))
+    draw.text((40, 250), temp[3], font=font2, fill=(140, 140, 140,))
 
     im.show()
