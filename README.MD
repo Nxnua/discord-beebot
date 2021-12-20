@@ -58,4 +58,43 @@
 - `!밥` 명령어 결과물
 <img src="https://user-images.githubusercontent.com/81071456/146807090-526c17df-03d3-4118-abe6-d75d938ecab5.PNG"/>
 
-##
+## 그 외 정보
+
+>이 프로젝트는 디스코드 봇 API discord.py 를 기반으로 개발되었습니다. 개발에 사용한 패키지 목록은 다음과 같습니다.
+
+```
+- discord
+- discord.ext
+- itertools
+- requests
+- bs4 (BeautifulSoup)
+- PIL (pillow)
+- io
+```
+
+
+>꿀벌봇은 [your.gg](https://your.gg)와 [fow.kr](https://fow.kr)에서 가져온 데이터를 기반으로
+여러분에게 깔끔하게 가공된 정보를 제공합니다.
+꿀벌봇이 제공하는 데이터의 출처는 your.gg와 fow.kr에 있습니다.
+
+
+
+
+>아래는 프로젝트를 개발하면서 코드 일부 인용 및 참고한 사이트 입니다.
+
+- [네이버 블로그 코코블루의 다락방](https://blog.naver.com/PostView.naver?blogId=6116949&logNo=221949748751&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+```
+main.py에서 on_member_join과 on_member_remove를 구현함에 있어서 
+각 디스코드 채널에 접근하는데에 어려움이 있었습니다. 
+오랜 검색 끝에 적절한 코드를 찾아서 거의 동일하게 main.py에 적용하였습니다.
+```
+- [devwithpug.github.io](https://devwithpug.github.io/python/sabot-6/#%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-pillow-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC)
+```
+처음에는 추출해온 데이터를 단순히 텍스트로 제공하려 했었지만, 
+좀더 깔끔한 정보 제공을 위해 데이터를 이미지로 가공할 방법을 찾았습니다. 
+그 과정중에 pillow 패키지를 이용한 구현법을 참고하게 된 글입니다.
+```
+- [티스토리 정구리의 우주정복](https://j-ungry.tistory.com/180?category=894695)
+```
+욕설 필터링 기능을 구현하면서 참고한 글입니다.
+```
