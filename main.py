@@ -29,12 +29,6 @@ async def on_ready():
 async def change_status():
     await client.change_presence(activity=discord.Game(name=next(status)))
 
-async def my_background_task():
-    await client.wait_until_ready()
-    channel = client.get_channel(id=921987302362857495)
-    while not client.is_closed:
-        await channel.send("붕붕!")
-        await asyncio.sleep(5)
 
 @client.event
 async def on_guild_join(guild):
@@ -49,7 +43,6 @@ async def on_member_join(member):
     channel = client.get_channel(id=921987302362857495)
     await channel.send('협곡에서 즐거운 시간 보내세요 ' + member.name + ' 님!')
     await channel.send('!명령어 를 입력하시면 제가 뭘 할 수 있는지 보여드릴게요😎')
-    """embed = command(member)"""
 
 
 @client.event
@@ -75,9 +68,9 @@ async def on_message(message):
         await message.channel.send(embed=hey(message))
     if message.content.startswith('!가붕'):
         await message.channel.send(embed=garen(message))
-    if message.content.startswith('!검색'):
+    if message.content.startswith('!유저'):
         t1 = t.time()
-        await message.channel.send(embed=search(message))
+        await message.channel.send(file=search(message))
         t2 = t.time()
         embed = discord.Embed(title="데이터 출처", description="your.gg / fow.kr", color=0x62c1cc)
         embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
@@ -96,5 +89,4 @@ async def on_message(message):
                 await message.channel.send(filtering(message))
 
 
-client.loop.create_task(my_background_task())
 client.run(token)
