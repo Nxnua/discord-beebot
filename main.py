@@ -4,6 +4,7 @@ from chatmanage import filtering, command, hello, hey, garen, meal
 from discord.ext import tasks
 from itertools import cycle
 from search import search
+import time as t
 
 intents = discord.Intents.default()
 intents.members = True
@@ -74,7 +75,11 @@ async def on_message(message):
     if message.content.startswith('!가붕'):
         await message.channel.send(embed=garen(message))
     if message.content.startswith('!검색'):
+        t1 = t.time()
         await message.channel.send(embed=search(message))
+        t2 = t.time()
+        embed = discord.Embed(title="소요시간", description=str(round(t2 - t1, 3)) + "초", color=0x62c1cc)
+        await message.channel.send(embed=embed)
 
     else:
         for i in shit:
