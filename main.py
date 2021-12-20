@@ -32,9 +32,9 @@ async def change_status():
 
 @client.event
 async def on_guild_join(guild):
-    await guild.send('안녕하세요 소환사님, 꿀벌봇이 왔어요🐝')
-    await guild.send('도움이 필요하시다면 아래 명령을 내려주세요!')
-    await guild.send(embed=command())
+    await guild.channels[0].send('안녕하세요 소환사님, 꿀벌봇이 왔어요🐝')
+    await guild.channels[0].send('도움이 필요하시다면 아래 명령을 내려주세요!')
+    await guild.channels[0].send(embed=command())
 
 
 @client.event
