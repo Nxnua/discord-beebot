@@ -82,32 +82,19 @@ def champion(message):
     draw.text((530, 230), "승률", font=font2, fill=(255, 255, 255))
     draw.text((660, 230), "표본", font=font2, fill=(255, 255, 255))
 
-    im.paste(getItemImage(item[0]), (30, 290))
-    draw.text((120, 310), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[1]), (150, 290))
-    draw.text((240, 310), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[2]), (270, 290))
-    draw.text((400, 310), temp[0], font=font2, fill=(160, 160, 160))
-    draw.text((530, 310), temp[1], font=font2, fill=(160, 160, 160))
-    draw.text((660, 310), temp[2], font=font2, fill=(160, 160, 160))
+    for i in range(3):
+        if len(temp) >= (i + 1) * 3:
+            im.paste(getItemImage(item[0 + i * 3]), (30, i*100+290))
+            draw.text((120, i*100+310), "▶", font=font3, fill=(255, 255, 255))
+            im.paste(getItemImage(item[1 + i * 3]), (150, i*100+290))
+            draw.text((240, i*100+310), "▶", font=font3, fill=(255, 255, 255))
+            im.paste(getItemImage(item[2 + i * 3]), (270, i*100+290))
+            draw.text((400, i*100+310), temp[0 + i * 3], font=font2, fill=(160, 160, 160))
+            draw.text((530, i*100+310), temp[1 + i * 3], font=font2, fill=(160, 160, 160))
+            draw.text((660, i*100+310), temp[2 + i * 3], font=font2, fill=(160, 160, 160))
+        else:
+            break
 
-    im.paste(getItemImage(item[3]), (30, 390))
-    draw.text((120, 410), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[4]), (150, 390))
-    draw.text((240, 410), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[5]), (270, 390))
-    draw.text((400, 410), temp[3], font=font2, fill=(160, 160, 160))
-    draw.text((530, 410), temp[4], font=font2, fill=(160, 160, 160))
-    draw.text((660, 410), temp[5], font=font2, fill=(160, 160, 160))
-
-    im.paste(getItemImage(item[6]), (30, 490))
-    draw.text((120, 510), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[7]), (150, 490))
-    draw.text((240, 510), "▶", font=font3, fill=(255, 255, 255))
-    im.paste(getItemImage(item[8]), (270, 490))
-    draw.text((400, 510), temp[6], font=font2, fill=(160, 160, 160))
-    draw.text((530, 510), temp[7], font=font2, fill=(160, 160, 160))
-    draw.text((660, 510), temp[8], font=font2, fill=(160, 160, 160))
 
     with BytesIO() as image_binary:
         im.save(image_binary, "png")
