@@ -5,6 +5,7 @@ from discord.ext import tasks
 from itertools import cycle
 from search import search
 import time as t
+#from champion import champion
 
 intents = discord.Intents.default()
 intents.members = True
@@ -80,7 +81,13 @@ async def on_message(message):
         t2 = t.time()
         embed = discord.Embed(title="데이터 출처", description="your.gg / fow.kr", color=0x62c1cc)
         embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
+        embed.set_footer(text="솔로랭크 기준 티어입니다. | 랭크 정보가 없을 시 출력되지 않습니다.",
+                         icon_url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
+
         await message.channel.send(embed=embed)
+    if message.content.startswith('!챔피언'):
+        pass
+        #await message.channel.send(embed=champion(message))
 
     else:
         for i in shit:
