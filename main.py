@@ -111,7 +111,7 @@ async def on_message(message):
             embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send(file=champion(message))
+            await message.channel.send(file=file)
         #await message.channel.send(embed=champion(message))
 
     else:
