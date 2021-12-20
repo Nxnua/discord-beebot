@@ -5,7 +5,7 @@ from discord.ext import tasks
 from itertools import cycle
 from search import search
 import time as t
-#from champion import champion
+from champion import champion
 
 intents = discord.Intents.default()
 intents.members = True
@@ -80,7 +80,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         await message.delete()
     if message.content.startswith('!챔피언'):
-        pass
+        await message.channel.send(file=champion(message))
         #await message.channel.send(embed=champion(message))
 
     else:
