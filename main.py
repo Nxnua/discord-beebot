@@ -111,8 +111,17 @@ async def on_message(message):
             embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjg5/MDAxNTI2NTQ3NTYzMDIz.awWFb8WW9qSk85krQsWf7GXGOShPNS5ilZyVOFyrbIUg.07pMLGfgYvN_IQPPn9JLBRRvVE8yMY_xiN4LzuIfElEg.PNG.heekyun93/4c7a1d3932a211fa.png?type=w800")
             await message.channel.send(embed=embed)
         else:
+            t1 = t.time()
             await message.channel.send(file=file)
+            t2 = t.time()
+            embed = discord.Embed(title="데이터 출처", description="fow.kr", color=0x62c1cc)
+            embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
+            embed.set_footer(text="집계된 데이터가 적을 경우 통계가 편향될 수 있습니다.",
+                             icon_url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
+            await message.channel.send(embed=embed)
         #await message.channel.send(embed=champion(message))
+
+        await message.delete()
 
     else:
         for i in shit:
