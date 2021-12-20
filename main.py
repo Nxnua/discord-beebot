@@ -78,7 +78,8 @@ async def on_message(message):
         t1 = t.time()
         await message.channel.send(embed=search(message))
         t2 = t.time()
-        embed = discord.Embed(title="소요시간", description=str(round(t2 - t1, 3)) + "초", color=0x62c1cc)
+        embed = discord.Embed(title="데이터 출처", description="your.gg / fow.kr", color=0x62c1cc)
+        embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
         await message.channel.send(embed=embed)
 
     else:
