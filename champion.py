@@ -66,7 +66,7 @@ def champion(message):
     im.paste(table2, (220, 21))
     font = ImageFont.truetype("malgunbd.ttf", 35)
     font2 = ImageFont.truetype("malgunbd.ttf", 30)
-    font3 = ImageFont.truetype("malgunbd.ttf", 28)
+    font3 = ImageFont.truetype("malgunbd.ttf", 23)
     draw.text((240, 45), line_info[1], font=font, fill=(255, 255, 255))
     im.paste(getIconImage(line_info[2]), (240, 110))
     draw.text((320, 117), line_info[2], font=font2, fill=(160, 160, 160))
@@ -76,6 +76,38 @@ def champion(message):
     im.paste(table3, (20, 220))
     im.paste(table4, (20, 280))
     im.paste(table4, (20, 480))
+
+    draw.text((145, 230), "템트리", font=font2, fill=(255, 255, 255))
+    draw.text((400, 230), "픽률", font=font2, fill=(255, 255, 255))
+    draw.text((530, 230), "승률", font=font2, fill=(255, 255, 255))
+    draw.text((660, 230), "표본", font=font2, fill=(255, 255, 255))
+
+    im.paste(getItemImage(item[0]), (30, 290))
+    draw.text((120, 310), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[1]), (150, 290))
+    draw.text((240, 310), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[2]), (270, 290))
+    draw.text((400, 310), temp[0], font=font2, fill=(160, 160, 160))
+    draw.text((530, 310), temp[1], font=font2, fill=(160, 160, 160))
+    draw.text((660, 310), temp[2], font=font2, fill=(160, 160, 160))
+
+    im.paste(getItemImage(item[3]), (30, 390))
+    draw.text((120, 410), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[4]), (150, 390))
+    draw.text((240, 410), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[5]), (270, 390))
+    draw.text((400, 410), temp[3], font=font2, fill=(160, 160, 160))
+    draw.text((530, 410), temp[4], font=font2, fill=(160, 160, 160))
+    draw.text((660, 410), temp[5], font=font2, fill=(160, 160, 160))
+
+    im.paste(getItemImage(item[6]), (30, 490))
+    draw.text((120, 510), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[7]), (150, 490))
+    draw.text((240, 510), "▶", font=font3, fill=(255, 255, 255))
+    im.paste(getItemImage(item[8]), (270, 490))
+    draw.text((400, 510), temp[6], font=font2, fill=(160, 160, 160))
+    draw.text((530, 510), temp[7], font=font2, fill=(160, 160, 160))
+    draw.text((660, 510), temp[8], font=font2, fill=(160, 160, 160))
 
     with BytesIO() as image_binary:
         im.save(image_binary, "png")
@@ -89,7 +121,7 @@ def getItemImage(name):
     url = name
     res = requests.get("http:" + url).content
     im = Image.open(BytesIO(res))
-    return im.resize((30, 30))
+    return im.resize((80, 80))
 
 def getChampImage(name):
     url = name
