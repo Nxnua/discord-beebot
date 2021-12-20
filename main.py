@@ -6,6 +6,7 @@ from itertools import cycle
 from search import search
 import time as t
 from champion import champion
+from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.members = True
@@ -32,9 +33,11 @@ async def change_status():
 
 @client.event
 async def on_guild_join(guild):
-    await guild.channels[0].send('안녕하세요 소환사님, 꿀벌봇이 왔어요🐝')
-    await guild.channels[0].send('도움이 필요하시다면 아래 명령을 내려주세요!')
-    await guild.channels[0].send(embed=command())
+    for channel in guild.text_channels:
+        if channel.permissions_for(guild.me).send_messages:
+            await channel.send('안녕하세요 소환사님, 꿀벌봇이 왔어요🐝')
+            await channel.send('도움이 필요하시다면 아래 명령을 내려주세요!')
+            await channel.send(embed=command())
 
 
 @client.event
