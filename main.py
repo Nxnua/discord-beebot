@@ -62,7 +62,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith('!명령어'):
-        await message.channel.send(embed=command(message))
+        await message.channel.send(embed=command())
     if message.content.startswith('!안녕'):
         await message.channel.send(hello(message) + message.author.name + ' 님!')
     if message.content.startswith('!밥') or message.content.startswith('!메뉴'):
