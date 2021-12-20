@@ -5,7 +5,7 @@ def filtering(message):
     manage = "소환사님 🎀✨예쁜 말✨🎀을 사용해😡주세요~!😎😘"
     return manage
 
-def command(message):
+def command():
     embed = discord.Embed(title=f"명령어 모음", description="꿀벌봇은 현재 아래 기능들을 지원하고 있습니다!", color=0xf3bb76)
     embed.set_thumbnail(url="https://mblogthumb-phinf.pstatic.net/MjAxODA1MTdfMjEx/MDAxNTI2NTQ3NTYzMDI0.GGFyQth1IVreeUdrVmYVopJlv8ZX2EsTQGqQ3h6ktjEg.r6jltvwy2lBUvB_Wh4M9xvxw-gwV4RHUR1AXSF-nqpMg.PNG.heekyun93/4fb137544b692e53.png?type=w800")
     embed.add_field(name=f"!유저", value="`!유저 닉네임 (ex. !유저 빽핑의화신)`\n해당 유저 정보를 카드 형식으로 볼 수 있습니다", inline=False)
