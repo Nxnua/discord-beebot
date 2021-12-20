@@ -50,7 +50,8 @@ async def on_member_join(member):
 
 @client.event
 async def on_member_remove(member):
-    channel = client.get_channel(id=921987302362857495)
+    #channel = client.get_channel(id=921987302362857495)
+    channel = member.server.default_channel
     await channel.send(member.name + ' 님이 협곡을 떠나셨어요.')
 
 
