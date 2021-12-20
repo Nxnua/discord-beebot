@@ -27,6 +27,8 @@ def champion(message):
 
 
     lineinfo = soup.find("div", attrs={"class" : "position_selected"})
+    pic = soup.find("div", attrs={"class" : "cham_solo"})
+    pic_url = pic.find('img').get('src')
     icon_url = lineinfo.find('img').get('src')
     line_name = line
     temp = lineinfo.find('span').get_text()
@@ -34,7 +36,9 @@ def champion(message):
     del temp[0]
     del temp[3]
     temp[0] = "챔피언 라인 픽률 " + temp[0]
-    line_info = [icon_url, line_name, temp]
+    print(pic_url)
+    line_info = [pic_url, icon_url, line_name, temp]
+    print(line_info)
 
     iteminfo = soup.select('body > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(12) > div:nth-child(1) > div:nth-child(2) > table > tbody')
     print(type(iteminfo[0]))
