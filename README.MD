@@ -130,6 +130,7 @@
 
 ```
 - discord
+- discord.py
 - discord.ext
 - requests
 - bs4 (BeautifulSoup)
