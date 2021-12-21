@@ -67,11 +67,9 @@
 ```
 - discord
 - discord.ext
-- itertools
 - requests
 - bs4 (BeautifulSoup)
 - PIL (pillow)
-- io
 ```
 
 >꿀벌봇 개발에 사용된 봇 아이콘(꿀벌 이미지), 챔피언, 포지션, 아이템 등에 대하여 이미지를 포함한 모든 정보의 저작권은
