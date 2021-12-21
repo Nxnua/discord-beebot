@@ -1,5 +1,4 @@
 import discord
-import asyncio
 from chatmanage import filtering, command, hello, hey, garen, meal
 from discord.ext import tasks
 from itertools import cycle

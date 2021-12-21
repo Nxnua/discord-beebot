@@ -1,6 +1,5 @@
 import discord
 import requests
-import time as t
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
