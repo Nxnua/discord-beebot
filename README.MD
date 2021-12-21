@@ -54,6 +54,7 @@
           <img src="https://user-images.githubusercontent.com/81071456/146889985-fbc70009-f405-4845-a1ff-1171cec58194.png" width="200" height="240"/>
 
         - 초대할 서버를 선택한 후 관리자 권한 사용을 허용해 주셔야 모든 기능을 사용 가능합니다.
+        - 관리자 권한 사용 체크 해제 시 욕설 필터링 기능 사용이 불가합니다.
          
           <img src="https://user-images.githubusercontent.com/81071456/146891035-eabc29e3-be4c-4217-b08c-62d3a14536a6.PNG" width="200" height="280"/>
 
