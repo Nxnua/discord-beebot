@@ -5,7 +5,6 @@ from itertools import cycle
 from search import search
 import time as t
 from champion import champion
-from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.members = True

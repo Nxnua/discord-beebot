@@ -1,0 +1,5 @@
+discord
+discord.py
+Pillow
+beautifulsoup4
+requests
